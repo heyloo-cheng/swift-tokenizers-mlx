@@ -16,7 +16,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/ml-explore/mlx-swift-lm", branch: "main"),
-        .package(url: "https://github.com/DePasqualeOrg/swift-tokenizers.git", from: "0.2.0"),
+        .package(url: "https://github.com/heyloo-cheng/swift-tokenizers.git", from: "0.2.0"),
         .package(url: "https://github.com/DePasqualeOrg/swift-hf-api.git", from: "0.2.0"),
     ],
     targets: [
@@ -24,7 +24,7 @@ let package = Package(
             name: "MLXLMTokenizers",
             dependencies: [
                 .product(name: "MLXLMCommon", package: "mlx-swift-lm"),
-                .product(name: "Tokenizers", package: "swift-tokenizers"),
+                .product(name: "MLXSwiftTokenizers", package: "swift-tokenizers"),
             ]
         ),
         .target(
